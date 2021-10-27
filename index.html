@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tower Défense</title>
+        <script src="scripts/index.js" type="module"></script>
+        <style>
+            body {
+                background-color: grey;
+                font-family: sans-serif;
+            }
+            pie-chart {
+                margin: 20px;
+                width: 500px;
+                height: 500px;
+                --tooltip-bg: aliceblue;
+            }
+        </style>
+    </head>
+    <body>
+        <pie-chart
+            id="demo"
+            data="40;30;30;20;10;10;25"
+            gap="0.05"
+            donut="0.2"
+            labels="Jaune;Vert clair;Orange;Bleu;Rouge;Bleu clair;Vert"
+        ></pie-chart>
+        <pie-chart data="10;15;10;30;80;60" colors="#0c94fa;cyan"></pie-chart>
+        <script>
+            const demo = document.querySelector('#demo');
+            demo.addEventListener('sectionhover', (e) => console.log('Survolé', e.detail));
+        </script>
+    </body>
+</html>
